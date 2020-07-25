@@ -16,14 +16,13 @@
         for (const task of tasks) {
             htmlString += `
             <li
-            ${task.done ? " style=\"text-decoration: line-through\"" : ""}
+            ${task.done ? "style=\"text-decoration: line-through\"" : ""}
             > 
             ${task.content}
             </li>
             `;
         }
-        document.querySelector("js-tasks").innerHTML = htmlString;
-        //Błąd w linii 25: Cannot set property 'innerHTML' of null 
+        document.querySelector("js-tasks").innerHTML = htmlString; //Błąd w linii 25: Cannot set property 'innerHTML' of null 
     };
 
     const init = () => {
